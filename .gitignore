@@ -1,0 +1,20 @@
+# Ignore Python virtual environment
+venv/
+
+# Ignore Node.js modules
+node_modules/
+
+# Ignore any compiled Python files
+*.pyc
+
+# Ignore any generated files by create-react-app
+/build/
+
+# Ignore environment-specific files
+.env
+
+# Ignore any logs or runtime data
+*.log
+
+# Ignore any user-specific files
+.DS_Store
