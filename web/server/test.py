@@ -1,0 +1,50 @@
+import os  
+
+f = open('test.tex','w')
+f.write(r'''
+\documentclass{article}
+
+\title{My First LaTeX Document}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+This is a simple LaTeX document. Here, we will learn how to create sections, subsections, and add some basic formatting.
+
+\section{Sections}
+Sections divide your document into logical units. They are numbered automatically.
+
+\subsection{Subsections}
+You can also create subsections within sections. They are also numbered automatically.
+
+\subsection{Formatting}
+You can use \textbf{bold}, \textit{italic}, or \underline{underline} text easily in LaTeX.
+
+\subsection{Lists}
+\begin{itemize}
+    \item This is an item in a bullet list.
+    \item This is another item.
+\end{itemize}
+
+\begin{enumerate}
+    \item This is an item in a numbered list.
+    \item This is another item.
+\end{enumerate}
+
+\section{Conclusion}
+This concludes our simple LaTeX example. Have fun exploring further!
+
+\end{document}
+''')
+f.close()
+
+os.system("pdflatex --interaction nonstopmode -halt-on-error -file-line-error test.tex")
+
+f = open('test.pdf', 'r')
+print(f.read())
+
+print(1234)
