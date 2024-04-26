@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
 import './App.css'
-import Text from './components/text'
+import Frame from './components/frame';
 
 function App() {
-    const [text, setText] = useState(text);
 
     return (
         <div className="app">
-            <Text text={text} setText={setText} />
+            <Frame />
         </div>
     );
 }
